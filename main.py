@@ -1,4 +1,5 @@
 import sys
+import os
 import logging
 from datetime import datetime
 from aiohttp import web
@@ -28,6 +29,11 @@ def create_web_server(port):
 
 if __name__ == '__main__':
 	try:
+		os.makedirs(path_config.LOGS, exist_ok=True)
+		if not os.path.exists(path_config.SERVER_INFO_LOG):
+			f = open(path_config.SERVER_INFO_LOG, 'w')
+			f.close()
+
 		logging.basicConfig(filename=path_config.SERVER_INFO_LOG, level=logging.INFO)
 
 		logging.info('Start on %s' % datetime.now())
