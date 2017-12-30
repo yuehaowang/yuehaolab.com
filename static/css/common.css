@@ -1,0 +1,28 @@
+#nav .avatar {
+	width: 40px;
+	height: auto;
+}
+
+#nav .toggle-button {
+	margin-right: 10px;
+}
+
+#nav .dropdown-menu {
+	width: 100px;
+}
+
+
+#intro .banner {
+	margin-top: 70px;
+	text-align: center;
+	padding: 0px 30px;
+}
+
+#intro .banner h1 {
+	text-transform: uppercase;
+}
+
+
+#content .paragraph {
+	margin-bottom: 50px;
+}
