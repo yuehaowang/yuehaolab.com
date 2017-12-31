@@ -24,7 +24,7 @@ def create_web_server(port):
 	for res_path in router.resource_list:
 		app.router.add_resource(res_path)
 
-	web.run_app(app, host='localhost', port=port)
+	web.run_app(app, host='127.0.0.1', port=port)
 
 
 if __name__ == '__main__':
