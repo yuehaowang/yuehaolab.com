@@ -48,6 +48,10 @@ static_list = [
 	}
 ]
 
-resource_list = [
-	'/favicon.ico'
+single_resource_list = [
+	{
+		'method': 'GET',
+		'path': '/favicon.ico',
+		'target': 'static/favicon.ico'
+	}
 ]

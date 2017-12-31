@@ -18,3 +18,12 @@ async def showcase(request):
 @aiohttp_jinja2.template('about.html')
 async def about(request):
 	return {'subtitle': 'About'}
+
+def view_factory(url, path):
+	async def static_view(request):
+		prefix = url.rsplit('/', 1)[0] or '/'
+		route = web.StaticRoute(None, prefix, static_dir)
+
+		request.match_info['filename'] = path
+		return await route.handle(request)
+	return static_view
