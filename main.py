@@ -7,8 +7,8 @@ import jinja2
 import aiohttp_jinja2
 
 import router
-import views
 import path_config
+import views
 
 
 def create_web_server(port):
@@ -22,8 +22,8 @@ def create_web_server(port):
 	for static in router.static_list:
 		app.router.add_static(static['prefix'], static['path'])
 
-	for single in router.single_resource_list:
-		app.router.add_route(single['method'], single['path'], views.view_factory(single['path'], single['target']))
+	for single_res in router.single_resource_list:
+		app.router.add_route(single_res['method'], single_res['path'], views.view_factory(single_res['target']))
 
 	web.run_app(app, port=port)
 

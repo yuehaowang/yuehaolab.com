@@ -19,11 +19,8 @@ async def showcase(request):
 async def about(request):
 	return {'subtitle': 'About'}
 
-def view_factory(url, path):
+def view_factory(target):
 	async def static_view(request):
-		prefix = url.rsplit('/', 1)[0] or '/'
-		route = web.StaticRoute(None, prefix, static_dir)
+		return web.FileResponse(target)
 
-		request.match_info['filename'] = path
-		return await route.handle(request)
 	return static_view
