@@ -1,7 +1,3 @@
 $(document).ready(function() {
-	adjustFooterPos();
+	main();
 });
-
-function adjustFooterPos() {
-	
-}
