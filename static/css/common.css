@@ -47,6 +47,11 @@ html, body {
 	margin-bottom: 50px;
 }
 
+#content .paragraph .round-btn {
+	margin-top: 40px;
+	border-radius: 20px;
+}
+
 
 #footer {
 	width:100%;
