@@ -1,3 +1,14 @@
+html, body {
+	height: 100%;
+}
+
+
+#wrapper {
+	min-height: 100%;
+	position:relative;
+}
+
+
 #nav .avatar {
 	width: 40px;
 	height: auto;
@@ -22,7 +33,25 @@
 	text-transform: uppercase;
 }
 
+#intro .banner h1 span {
+	padding-right: 8px;
+}
+
+
+#content {
+	padding-bottom: 203px;
+	margin-bottom: 0px;
+}
 
 #content .paragraph {
 	margin-bottom: 50px;
+}
+
+
+#footer {
+	width:100%;
+	height: 203px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }

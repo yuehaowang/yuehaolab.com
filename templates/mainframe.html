@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ subtitle }} - Yuehao Lab</title>
+	<title>{{ page_title }} - Yuehao Lab</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -10,65 +10,68 @@
 	<script src="js/uikit.min.js"></script>
 	<script src="js/uikit-icons.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 
-{# Header #}
-<div id="nav" class="uk-position-top">
-	<nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
-		<div class="uk-navbar-left">
-			<a href="/" class="uk-navbar-item uk-logo uk-margin-small-left">
-				<img src="/images/yuehao_logo.png" class="avatar uk-margin-small-right" /> Yuehao Lab
-			</a>
-		</div>
-		<div class="uk-navbar-right uk-margin-small-right">
-			<ul class="uk-navbar-nav uk-visible@m">
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/showcase">Showcase</a></li>
-				<li><a href="/about">About</a></li>
-			</ul>
-			<div class="uk-navbar-item uk-visible@m">
-				<a target="_blank" href="https://github.com/yuehaowang" uk-icon="icon: github-alt" class="uk-button uk-button-default uk-border-rounded uk-icon">My Github </a>
+<div id="wrapper">
+	{# Header #}
+	<div id="nav" class="uk-position-top">
+		<nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+			<div class="uk-navbar-left">
+				<a href="/" class="uk-navbar-item uk-logo uk-margin-small-left">
+					<img src="/images/yuehao_logo.png" class="avatar uk-margin-small-right" /> Yuehao Lab
+				</a>
 			</div>
+			<div class="uk-navbar-right uk-margin-small-right">
+				<ul class="uk-navbar-nav uk-visible@m">
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/showcase">Showcase</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+				<div class="uk-navbar-item uk-visible@m">
+					<a target="_blank" href="https://github.com/yuehaowang" uk-icon="icon: github-alt" class="uk-button uk-button-default uk-border-rounded uk-icon">My Github </a>
+				</div>
 
-			<div class="uk-hidden@m uk-inline">
-				<button class="toggle-button uk-icon-button uk-button-primary" uk-icon="icon: menu"></button>
-				<div uk-dropdown="mode: click; animation: uk-animation-slide-top-small" class="dropdown-menu uk-border-rounded">
-					<ul class="uk-nav uk-dropdown-nav">
-						<li><a href="/blog"><span class="uk-margin-small-right" uk-icon="icon: bookmark"></span> Blog</a></li>
-						<li><a href="/showcase"><span class="uk-margin-small-right" uk-icon="icon: star"></span> Showcase</a></li>
-						<li><a href="/about"><span class="uk-margin-small-right" uk-icon="icon: user"></span> About</a></li>
-						<li><a href="https://github.com/yuehaowang"><span class="uk-margin-small-right" uk-icon="icon: github"></span> My Github</a></li>
-					</ul>
+				<div class="uk-hidden@m uk-inline">
+					<button class="toggle-button uk-icon-button uk-button-primary" uk-icon="icon: menu"></button>
+					<div uk-dropdown="mode: click; animation: uk-animation-slide-top-small" class="dropdown-menu uk-border-rounded">
+						<ul class="uk-nav uk-dropdown-nav">
+							<li><a href="/blog"><span class="uk-margin-small-right" uk-icon="icon: bookmark"></span> Blog</a></li>
+							<li><a href="/showcase"><span class="uk-margin-small-right" uk-icon="icon: star"></span> Showcase</a></li>
+							<li><a href="/about"><span class="uk-margin-small-right" uk-icon="icon: user"></span> About</a></li>
+							<li><a href="https://github.com/yuehaowang"><span class="uk-margin-small-right" uk-icon="icon: github"></span> My Github</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
-</div>
+		</nav>
+	</div>
 
 
-{# Banner #}
-<div id="intro" class="uk-section uk-section-medium uk-section-secondary uk-light uk-flex uk-flex-center">
-	{% block banner %}
-	{% endblock %}
-</div>
+	{# Banner #}
+	<div id="intro" class="uk-section uk-section-medium uk-section-secondary uk-light uk-flex uk-flex-center">
+		{% block banner %}
+		{% endblock %}
+	</div>
 
 
-{# Content #}
-<div id="content" class="uk-container uk-margin-large">
-	{% block content %}
-	{% endblock %}
-</div>
+	{# Content #}
+	<div id="content" class="uk-container uk-margin-large">
+		{% block content %}
+		{% endblock %}
+	</div>
 
 
-{# Footer #}
-<div class="uk-section uk-section-primary uk-preserve-color">
-	<div class="uk-flex uk-flex-center">
-		<div class="uk-card uk-card-small uk-card-default uk-card-body uk-border-rounded">
-			<h5>Copyright © 2017 Yuehao Wang</h5>
-		</div>
-		<div class="uk-card uk-card-small uk-card-default uk-card-body uk-border-rounded uk-margin-small-left">
-			<h5>Powered by <span uk-icon="icon: uikit"></span> <a target="_blank" href="https://getuikit.com" class="uk-button uk-button-text">UIKit</a></h5>
+	{# Footer #}
+	<div id="footer" class="uk-section uk-section-primary uk-preserve-color">
+		<div class="uk-flex uk-flex-center">
+			<div class="uk-card uk-card-small uk-card-default uk-card-body uk-border-rounded">
+				<h5>Copyright © 2017 Yuehao Wang</h5>
+			</div>
+			<div class="uk-card uk-card-small uk-card-default uk-card-body uk-border-rounded uk-margin-small-left">
+				<h5>Powered by <span uk-icon="icon: uikit"></span> <a target="_blank" href="https://getuikit.com" class="uk-button uk-button-text">UIKit</a></h5>
+			</div>
 		</div>
 	</div>
 </div>

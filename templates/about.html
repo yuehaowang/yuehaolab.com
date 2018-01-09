@@ -1,27 +1,15 @@
-{% extends 'mainframe.html' %}
-
-
-{% block banner %}
-
-	<div class="banner">
-		<h1><span class="uk-visible@m" uk-icon="icon: user; ratio: 3"></span> About</h1>
-		<h3>Who am I ? Where do I come from ? Where am I going ?</h3>
-	</div>
-
-{% endblock %}
+{% extends 'mainframe_with_m_banner.html' %}
 
 
 {% block content %}
 	
 	<div class="paragraph">
-		<h1>About me</h1>
+		<h1>About</h1>
 		<p>
 			I'm a student from ShanghaiTech Univeristy majored in computer science.
 			I'm familiar with web &amp; game development in <code>HTML5</code> &amp; <code>Javascript</code>,
 			and backend development in <code>C++</code>, <code>Python</code>, and Mozilla <code>Rust</code>.
-			I've learned something about Canny, RANSAC and Hough Transform for CV
-			and created a simple robotics program for route searching on kobuki in school's laboratory.
-			Meanwhile, I'm learning OpenGL by myself for CG research.
+			I plan to work on CG, AI and CV research. This homepage is all about my personal life insight and experience sharing on IT field.
 		</p>
 	</div>
 
@@ -48,19 +36,25 @@
 	<div class="paragraph">
 		<h1>Links</h1>
 		<p>
-			<h3>My Links</h3>
 			<ul>
-				<li><b>My Homepage: </b><a href="http://yuehaolab.com" target="_blank">http://yuehaolab.com</a></li>
-				<li><b>My Github: </b><a href="https://github.com/yuehaowang" target="_blank">https://github.com/yuehaowang</a></li>
-				<li><b>My LinkedIn: </b><a href="https://www.linkedin.com/in/yuehaowang" target="_blank">https://www.linkedin.com/in/yuehaowang</a></li>
-				<li><b>CSDN Blog(in Chinese): </b><a href="http://blog.csdn.net/yorhomwang" target="_blank">http://blog.csdn.net/yorhomwang</a></li>
-			</ul>
+				<li>
+					<h3>My Links</h3>
+					<ul>
+						<li><b>My Homepage: </b><a href="http://yuehaolab.com" target="_blank">http://yuehaolab.com</a></li>
+						<li><b>My Github: </b><a href="https://github.com/yuehaowang" target="_blank">https://github.com/yuehaowang</a></li>
+						<li><b>My LinkedIn: </b><a href="https://www.linkedin.com/in/yuehaowang" target="_blank">https://www.linkedin.com/in/yuehaowang</a></li>
+						<li><b>CSDN Blog(in Chinese): </b><a href="http://blog.csdn.net/yorhomwang" target="_blank">http://blog.csdn.net/yorhomwang</a></li>
+					</ul>
+				</li>
 
-			<h3>Friendship Links</h3>
-			<ul>
-				<li><b>GeekPie: </b><a href="https://geekpie.org/">https://geekpie.org/</a>
-				<li><b>Eastpiger: </b><a href="http://www.eastpiger.com/">http://www.eastpiger.com/</a></li>
-				<li><b>Lufylegend: </b><a href="http://www.lufylegend.com/">http://www.lufylegend.com/</a></li>
+				<li class="uk-margin-medium">
+					<h3>Friendship Links</h3>
+					<ul>
+						<li><b>GeekPie: </b><a href="https://geekpie.org/">https://geekpie.org/</a>
+						<li><b>Eastpiger: </b><a href="http://www.eastpiger.com/">http://www.eastpiger.com/</a></li>
+						<li><b>Lufylegend: </b><a href="http://www.lufylegend.com/">http://www.lufylegend.com/</a></li>
+					</ul>
+				</li>
 			</ul>
 		</p>
 	</div>
