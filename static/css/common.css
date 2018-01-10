@@ -50,6 +50,7 @@ html, body {
 #content .paragraph .round-btn {
 	margin-top: 40px;
 	border-radius: 20px;
+	float: right;
 }
 
 
