@@ -3,4 +3,5 @@ CONFIG = './config/'
 TEMPLATES = './templates/'
 LOGS = './logs/'
 
-SERVER_INFO_LOG = LOGS + 'server_info.log'
+# a log file for recording information from the python server
+PY_SERVER_LOG = LOGS + 'py_server.log'

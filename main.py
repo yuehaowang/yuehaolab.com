@@ -14,8 +14,10 @@ import views
 def create_web_server(port):
 	app = web.Application()
 
+	# jinja2 setup
 	aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader(path_config.TEMPLATES))
 
+	# add url routers
 	for route in router.route_list:
 		app.router.add_route(route['method'], route['path'], route['view'])
 
@@ -25,25 +27,31 @@ def create_web_server(port):
 	for single_res in router.single_resource_list:
 		app.router.add_route(single_res['method'], single_res['path'], views.view_factory(single_res['target']))
 
+	# run the server on a specified port
 	web.run_app(app, port=port)
 
 
 if __name__ == '__main__':
 	try:
+		# make 'logs' directory if it doesn't exist
 		os.makedirs(path_config.LOGS, exist_ok=True)
-		if not os.path.exists(path_config.SERVER_INFO_LOG):
-			f = open(path_config.SERVER_INFO_LOG, 'w')
+		# create the PY_SERVER_LOG file if it doesn't exist
+		if not os.path.exists(path_config.PY_SERVER_LOG):
+			f = open(path_config.PY_SERVER_LOG, 'w')
 			f.close()
 
-		logging.basicConfig(filename=path_config.SERVER_INFO_LOG, level=logging.INFO)
+		# configure logging
+		logging.basicConfig(filename=path_config.PY_SERVER_LOG, level=logging.INFO)
 
 		logging.info('Start on %s' % datetime.now())
 
+		# get the port where the server works
 		if len(sys.argv) >= 2:
 			port = int(sys.argv[1])
 		else:
 			port = 9331
 
+		# start the server
 		create_web_server(port)
 
 	finally:
