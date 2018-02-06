@@ -1,6 +1,10 @@
+#!/usr/bin/env python3
+
+
 import sys
 import os
 import logging
+import argparse
 from datetime import datetime
 from aiohttp import web
 import jinja2
@@ -21,6 +25,7 @@ def create_web_server(port):
 	for route in router.route_list:
 		app.router.add_route(route['method'], route['path'], route['view'])
 
+	# the code below is just used for loading static resource when testing locally
 	for static in router.static_list:
 		app.router.add_static(static['prefix'], static['path'])
 
@@ -31,28 +36,22 @@ def create_web_server(port):
 	web.run_app(app, port=port)
 
 
+parser = argparse.ArgumentParser(description='The python server that works on yuehaolab.com.')
+parser.add_argument('--logfile', help='Path to the log file.', default='', type=str)
+parser.add_argument('--port', help='The port where the server works.', default=9331, type=int)
+
 if __name__ == '__main__':
 	try:
-		# make 'logs' directory if it doesn't exist
-		os.makedirs(path_config.LOGS, exist_ok=True)
-		# create the PY_SERVER_LOG file if it doesn't exist
-		if not os.path.exists(path_config.PY_SERVER_LOG):
-			f = open(path_config.PY_SERVER_LOG, 'w')
-			f.close()
+		args = parser.parse_args()
 
 		# configure logging
-		logging.basicConfig(filename=path_config.PY_SERVER_LOG, level=logging.INFO)
+		if args.logfile != '' and os.path.exists(args.logfile):
+			logging.basicConfig(filename=args.logfile, level=logging.INFO)	
 
 		logging.info('Start on %s' % datetime.now())
 
-		# get the port where the server works
-		if len(sys.argv) >= 2:
-			port = int(sys.argv[1])
-		else:
-			port = 9331
-
 		# start the server
-		create_web_server(port)
+		create_web_server(args.port)
 
 	finally:
 		logging.info('Exit on %s' % datetime.now())
