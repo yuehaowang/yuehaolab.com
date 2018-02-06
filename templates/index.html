@@ -1,5 +1,15 @@
 {% extends 'mainframe.html' %}
 
+{% block extend_head %}
+	
+	<style>
+		.project-intro {
+			border-left: 10px #C5C5C5 solid;
+		}
+	</style>
+
+{% endblock %}
+
 
 {% block banner %}
 
@@ -29,6 +39,34 @@
 
 {% block content %}
 
-	<h1>Upgrading...</h1>
+	<div class="paragraph">
+		<h1>Featured Projects</h1>
+		<div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin-medium" uk-grid>
+			<div class="uk-card-media-left uk-cover-container">
+				<img src="/images/greeting_card_demo.png" alt="" uk-cover>
+				<canvas width="670" height="400"></canvas>
+			</div>
+			<div>
+				<div class="uk-card-body">
+					<h3 class="uk-card-title">Greeting Card</h3>
+					<p>
+						<i>Greeting Card</i> is designed for creating an untraditional greeting card to show your message. It provides a magnificent animation to show the message brick by brick and receivers just need to tap the screen until they make sense of what you want to express (maybe it's your gratitude or your love). Find no creative idea to express yourself? <a href="https://github.com/yuehaowang/greeting_card" target="_blank">Try <i>Greeting Card</i> without hesitation~</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="paragraph">
+		<h1>I am Working on...</h1>
+		<div class="uk-padding-large uk-background-muted uk-margin-medium project-intro">
+			<h2>Duckling Game Engine</h2>
+			<div class="uk-text-lead">
+				<p>
+					<i>Duckling</i> is an <i>OpenGL</i> based game engine aiming to simplify the process of game development in <i>python</i>. Easy-to-install, cross-platform and light is the major features of <i>duckling</i> game engine. If you are interested in this 'under-construction' project, <a href="https://github.com/yuehaowang/duckling" target="_blank">please check it on Github</a>.
+				</p>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}
