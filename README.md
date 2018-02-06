@@ -1,7 +1,7 @@
 # How to run the server
 
 ```bash
-$ sudo python3 ./main.py 80
+$ sudo python3 ./main.py --port 9331
 ```
 
-* Just supports python 3.5+ for `async` syntax.
+* Just supports python 3.5+ because of the use of `async` syntax.
