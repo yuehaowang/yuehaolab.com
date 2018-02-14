@@ -2,6 +2,7 @@
 static/demo/
 static/games/
 static/apps/
+static/docs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
