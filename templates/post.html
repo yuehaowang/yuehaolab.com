@@ -1,0 +1,35 @@
+{% extends 'mainframe.html' %}
+
+
+{% block extend_head %}
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<style type="text/css">
+		.post-content {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	</style>
+
+{% endblock %}
+
+
+{% block banner %}
+
+	<div class="banner">
+		<h1>{{ page_title }}</span></h1>
+		<h3><span uk-icon="icon: clock; ratio: 1.5" style="margin-right: 5px;"></span> {{ post_time }}</h3>
+	</div>
+
+{% endblock %}
+
+
+{% block content %}
+	
+	<div class="paragraph post-content">
+		{{ post_content }}
+	</div>
+
+{% endblock %}

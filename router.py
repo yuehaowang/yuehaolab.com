@@ -23,6 +23,12 @@ route_list = [
 		'path': '/about',
 		'view': views.about
 	}
+	,
+	{
+		'method': 'GET',
+		'path': '/post/{name}',
+		'view': views.post
+	}
 ]
 
 static_list = [
