@@ -20,7 +20,9 @@
 
 	<div class="banner">
 		<h1>{{ page_title }}</span></h1>
-		<h3><span uk-icon="icon: clock; ratio: 1.5" style="margin-right: 5px;"></span> {{ post_time }}</h3>
+		{% if post_time != "" %}
+			<h3><span uk-icon="icon: clock; ratio: 1.5" style="margin-right: 5px;"></span> {{ post_time }}</h3>
+		{% endif %}
 	</div>
 
 {% endblock %}

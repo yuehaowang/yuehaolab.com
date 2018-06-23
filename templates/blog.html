@@ -11,7 +11,7 @@
 			{% for item in post_list %}
 				<div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
 					<div class="uk-width-1-3@m uk-card-media-left uk-cover-container">
-						<img src="{{ '/images/blog/thumbnails/' + (post_list[item].thumbnail if ('thumbnail' in post_list[item]) else 'default.png') }}" alt="" uk-cover>
+						<img src="{{ (post_list[item].thumbnail if ('thumbnail' in post_list[item]) else '/images/blog/thumbnails/default.png') }}" alt="" uk-cover>
 						<canvas width="300" height="200"></canvas>
 					</div>
 					<div class="uk-width-2-3@m">
