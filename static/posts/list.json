@@ -2,5 +2,10 @@
 	"hello-world": {
 		"title": "Hello World",
 		"date": "May 27th, 2018"
+	},
+	"curtain-poem": {
+		"title": "窗帘",
+		"date": "Jul 28th, 2018",
+		"thumbnail": "/images/blog/thumbnails/curtain-poem.jpg"
 	}
 }
