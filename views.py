@@ -19,7 +19,7 @@ class PostUtils:
 
 		PostUtils.__pre_load_time = curr_time
 
-		with open('static/posts/list.json', 'r') as f:
+		with open('static/posts/list.json', 'r', encoding='utf8') as f:
 			PostUtils.post_list = json.loads(f.read())
 
 
@@ -50,7 +50,7 @@ async def post(request):
 		post_title = post["title"]
 		post_time = post["date"]
 
-		with open('static/posts/%s.md' % post_name, 'r') as f:
+		with open('static/posts/%s.md' % post_name, 'r', encoding='utf8') as f:
 			html = markdown.markdown(f.read())
 	else:
 		post_title = "404 Not Found"
