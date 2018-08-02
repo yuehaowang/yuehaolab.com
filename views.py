@@ -6,6 +6,9 @@ import time
 import markdown
 
 
+REFRESH_BLOG_PERIOD = 60;
+
+
 class PostUtils:
 	post_list = {}
 
@@ -14,7 +17,7 @@ class PostUtils:
 	def load_post_list():
 		curr_time = time.time()
 
-		if PostUtils.__pre_load_time > 0 and curr_time - PostUtils.__pre_load_time < 600:
+		if PostUtils.__pre_load_time > 0 and curr_time - PostUtils.__pre_load_time < REFRESH_BLOG_PERIOD:
 			return
 
 		PostUtils.__pre_load_time = curr_time
