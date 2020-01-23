@@ -1,10 +1,12 @@
 .DS_Store
+*.out
 static/demo/
 static/games/
 static/apps/
 static/docs/
 static/videos/
 static/downloads/
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -6,7 +6,7 @@ import time
 import markdown
 
 
-REFRESH_BLOG_PERIOD = 60;
+REFRESH_BLOG_PERIOD = 60
 
 
 class PostUtils:
@@ -80,7 +80,7 @@ async def about(request):
 	return {
 		'page_title': 'About',
 		'banner_icon': 'user',
-		'banner_subtitle': 'Who am I ? Where did I come from ? Where am I going ?'
+		'banner_subtitle': 'Who am I ? Where do I come from ? Where am I going ?'
 	}
 
 def view_factory(target):

@@ -31,7 +31,7 @@
 {% block content %}
 	
 	<div class="paragraph post-content">
-		{{ post_content }}
+		{{ post_content | safe }}
 	</div>
 
 {% endblock %}
