@@ -1,13 +1,40 @@
-# How to run the server
+# yuehaolab.com
+
+A python-based simple web server.
+
+Author: Yuehao Wang
+
+## Usage
+
+### Basic
+
+Setup:
 
 ```bash
-$ sudo python3 ./main.py --port 9331
+$ pip install -r requirements.txt
 ```
 
-* Just supports python 3.5+ because of the use of `async` syntax.
+Start server:
+
+```bash
+$ sudo python ./main.py
+```
+
+### Optional Arguments
+
+ - -h, --help: Show this help message and exit
+ - --logfile LOGFILE: Path to the log file. Default: ''.
+ - --port PORT: The port where the server works. Default: 9331.
 
 
-# Dependencies
+## Dependencies
+
+### Python
+
+- Python: 3.5.3+
+- Test passed on 3.5.3, 3.7.3
+
+### Packages
 
 - aiohttp
 - aiohttp_jinja2
