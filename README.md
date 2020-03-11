@@ -1,4 +1,4 @@
-# yuehaolab.com
+# yuehaolab-server
 
 A python-based simple web server.
 
